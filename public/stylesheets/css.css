@@ -1,0 +1,52 @@
+.jumbotron {
+    text-align: center;
+}
+
+.jumbotron h1 {
+    text-transform: uppercase;
+    font-size:3em;
+    letter-spacing: 2px;
+}
+
+fieldset input {
+    margin:0.5em auto;
+    display:block !important;
+}
+
+.navbar-inverse {
+    border-radius:0;
+}
+
+.padd {
+    margin:2em 0;
+}
+
+.padd img {
+    border-radius:10px;
+}
+
+.icon-pad {
+    cursor:pointer;
+    position:relative;
+    left:0.5em;
+}
+
+.trade:hover {
+    color:blue;
+}
+
+.delete:hover {
+    color:red;
+}
+
+.trade-item {
+    background-color:#999999;
+    padding:1em;
+    border-radius:15px;
+    text-align:left;
+    margin:1em;
+}
+
+.trade-item button {
+    margin-left:1em;
+}

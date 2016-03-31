@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book trade</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/css.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Book trade</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/books">All books</a></li>
+            <li><a href="/mybooks">My books</a></li>
+            <li><a href="/trades">My trades</a></li>
+                  <li><a href="/profile">Profile</a></li>
+                  <li><a href="/logout">Logout</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    
+    <div class="container jumbotron">
+        <form action="/profile" method="POST" >
+          
+          <fieldset>
+            <legend>Update your profile</legend>
+            <h4 class="text-success">{{update}}</h4>
+            <label>Your name: <input class="form-control" type="text" name="name" /></label>
+            <label>Your state: <input class="form-control" type="text" name="state" /></label>
+            <label>Your city: <input class="form-control" type="text" name="city" /></label>
+            <input class="btn btn-primary" type="submit" />
+          </fieldset>
+          
+        </form>
+        
+        {{#if name}}
+          <h4>Your name: {{name}}</h4>
+        {{/if}}
+        {{#if state}}
+          <h4>Your state: {{state}}</h4>
+        {{/if}}
+        {{#if city}}
+          <h4>Your city: {{city}}</h4>
+        {{/if}}
+    </div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
